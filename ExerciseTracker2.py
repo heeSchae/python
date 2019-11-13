@@ -20,7 +20,36 @@
 
 
 #Add your code here!
-
+class ExerciseSession:
+    def __init__(self, exercise, intensity, duration):
+        self.exercise = exercise
+        self.intensity = intensity
+        self.duration = duration
+        self.calories_burned = 0
+        
+    def get_exercise(self):
+        return self.exercise
+    
+    def get_intensity(self):
+        return self.intensity
+    
+    def get_duration(self):
+        return self.length
+    
+    def set_exercise(self, newexercise):
+        self.exercise = newexercise
+    def set_intensity(self, newintensity):
+        self.intensity = newintensity
+    def set_duration(self, newduration):
+        self.length = newduration  
+        
+    def calories_burned(self):
+        if self.intensity == "Low":
+            self.calories_burned = 4*self.duration
+        elif self.intensity == "Moderate":
+            self.calories_burned = 8*self.duration
+        elif self.intensity == "High":
+            self.calories_burned = 12*self.duration
 
 
 #If your code is implemented correctly, the lines below
