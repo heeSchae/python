@@ -35,6 +35,30 @@ class TodoItem:
         self.title = title
         self.description = description
         self.completed = completed
+    def getTitle(self):
+        return self.title
+    def getDescription(self):
+        return self.description
+    def getCompleted(self):
+        return self.completed
+    
+    def setTitle(self, newtitle):
+        if type(newtitle) == str:
+            self.title = newtitle
+        else:
+            self.title = None
+     
+    def setDescription(self, newDescription):
+        if type(newDescription) == str:
+            self.description = newDescription
+        else:
+            self.description = None
+        
+    def setCompleted(self, newCompleted):
+        if type(newCompleted) == bool:
+            self.completed = newCompleted
+        else:
+            self.completed = None
         
 #Below are some lines of code that will test your class.
 #You can change this code to test how your class behaves
