@@ -103,3 +103,15 @@ class Burrito:
             self.corn = new_value
         else:
             self.corn = False
+            
+    def get_cost(self):
+        base = 5.00
+        if self.meat in ["chicken", "pork", "tofu"]:
+            base += 1.00
+        if self.meat == "steak":
+            base += 1.50
+        if self.extra_meat and not self.meat == False:
+            base += 1.00
+        if self.guacamole:
+            base += 0.75
+        return float(base)
